@@ -1,53 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.notifications.NotificationsFragment">
-
-    <TextView
+  >
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Thông báo"
-        android:gravity="center"
-        android:textSize="30dp"
-        android:textColor="#fff"
-        android:padding="5dp"
-        android:background="#FF0000"
-        android:id="@+id/mes"/>
-    <com.google.android.material.tabs.TabLayout
-        android:layout_width="match_parent"
-        android:layout_below="@+id/mes"
-        android:layout_height="wrap_content"
-        android:id="@+id/tablayout1"
-        android:background="#FF0000"
-        app:tabTextColor="@color/black"
-        app:tabSelectedTextColor="@color/white"
-        app:tabIndicatorColor="@color/white">
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tab1"
-            android:text="Dịch vụ"/>
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tab2"
-            android:text="Của tôi"/>
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tab3"
-            android:text="Tin mới"/>
-
-    </com.google.android.material.tabs.TabLayout>
-
+        android:layout_height="wrap_content" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:background="@color/colorbg"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Thông báo"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout_noti"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.appbar.AppBarLayout>
     <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager_noti"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/vpager"/>
-</RelativeLayout>
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
